@@ -1,0 +1,14 @@
+.titoloApp{
+    text-align: center;
+}
+@keyframes blink {
+    0% { background-color: red; color: blue; }
+    25% { background-color: blue; color: green; }
+    50% { background-color: green; color: yellow; }
+    75% { background-color: yellow; color: orange; }
+    100% { background-color: orange; color: red; }
+  }
+  
+  .blinking {
+    animation: blink 1s infinite;
+  }
