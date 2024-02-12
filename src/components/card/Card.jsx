@@ -1,16 +1,18 @@
-
-const Card = (props) => {
+import Card from 'react-bootstrap/Card';
+const cardItem = (props) => {
     
     return(
         <>
-                    <div>
-                        <h1>{props.title}</h1>
-                        <img src={props.img} alt="img"/>
-                        <p>{props.description}</p>
-                        {props.price && <p>{props.price}</p>}     {/* rendering condizionale */}
-                      
-                    </div>
+            <Card style={{ width: '50px', height:'50px' }}>
+                <Card.Img variant="top" src={props.img} />
+            <Card.Body>
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Text>
+                    {props.category} - Price: {props.price && <p>{props.price}</p>} 
+                </Card.Text>
+            </Card.Body>
+            </Card>
         </>
     )
 }
-export default Card;
+export default cardItem;
